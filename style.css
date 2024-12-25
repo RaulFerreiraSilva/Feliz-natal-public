@@ -1,0 +1,80 @@
+html,
+body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+button {
+    padding: 17px 30px;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 25px;
+    background-image: linear-gradient(#ffffff, #dcdcdc);
+    color: #2728ff;
+    border: 2px solid #2728ff;
+    cursor: pointer;
+    z-index: 3;
+    transition: 0.1s;
+}
+
+button:hover {
+    background-image: linear-gradient(#ffffff, #ffffff);
+}
+
+button:active {
+    padding: 12px 28px;
+    background-image: linear-gradient(#dcdcdc, #dcdcdc);
+}
+
+#imageContainer {
+    opacity: 0; /* Escondido inicialmente */
+    transition: opacity 1s ease-in-out;
+    /* Coloca a imagem atrás dos GIFs */
+}
+
+#imageContainer img {
+    height: auto;
+    max-width: 100%; /* Garante que a imagem seja responsiva */
+    transform: scale(1) rotate(0deg); /* Começa com o tamanho original e sem rotação */
+    transition: transform 4s ease-in-out; /* Efeito suave para aumento e rotação */
+}
+
+/* Quando a imagem for visível e você quiser aumentar e girar, use transform: scale() + rotate() */
+#imageContainer img.enlarge {
+    transform: scale(1.3) rotate(2520deg); /* Aumenta a imagem em 1.5x e a gira 2520 graus */
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#animatedText {
+    font-size: 28px;
+    text-align: justify;
+    color: rgb(137, 0, 0);
+    transition: none;
+}
